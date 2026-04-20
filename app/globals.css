@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --background: #2B1B12;
+  --foreground: #F5EBE0;
+  --card-bg: #3E2723;
+  --accent: #FF7A00;
+  --muted: #D8C4B5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card-bg: var(--card-bg);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, rgba(255, 122, 0, 0.12), transparent 25%),
+    radial-gradient(circle at bottom right, rgba(255, 122, 0, 0.1), transparent 30%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: rgba(255, 122, 0, 0.35);
+  color: var(--background);
+}
+
+button,
+input,
+select {
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease;
+}
+
